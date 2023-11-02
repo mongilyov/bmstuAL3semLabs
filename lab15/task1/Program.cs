@@ -1,90 +1,88 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Timers;
+using System.Threading;
 
-namespace task1
+namespace DirectorySystemWatcher
 {
-    public interface IObserver
+    public class DirectoryChangedEventArgs : EventArgs
     {
-        void Update(string path); // Метод, вызываемый при изменении состояния
+        public string FileName { get; set; }
     }
 
-    // Класс, реализующий наблюдаемый объект
-    public class DirectoryWatcher {
+    public delegate void DirectoryChangedEventHandler(object sender, DirectoryChangedEventArgs args);
+
+    public class DirectorySystemWatcher
+    {
         private string directoryPath;
-        private System.Timers.Timer timer;
-        private List<IObserver> observers;
+        public Timer timer;
+        private List<string> currentFiles;
 
-        public DirectoryWatcher(string path)
+        public event DirectoryChangedEventHandler FileChanged;
+
+        public DirectorySystemWatcher(string directoryPath)
         {
-            directoryPath = path;
-            observers = new List<IObserver>();
+            this.directoryPath = directoryPath;
+            currentFiles = Directory.GetFiles(directoryPath).ToList();
 
-            timer = new System.Timers.Timer();
-            timer.Interval = 1000; // Интервал проверки состояния директории (1 секунда)
-            timer.Elapsed += TimerElapsed;
+            timer = new Timer(CheckDirectory, null, TimeSpan.Zero, TimeSpan.FromSeconds(1));
         }
 
-        public void Start()
+        public void CheckDirectory(object state)
         {
-            timer.Start();
-        }
+            var files = Directory.GetFiles(directoryPath);
 
-        public void Stop()
-        {
-            timer.Stop();
-        }
-
-        public void AddObserver(IObserver observer)
-        {
-            observers.Add(observer);
-        }
-
-        public void RemoveObserver(IObserver observer)
-        {
-            observers.Remove(observer);
-        }
-
-        private void TimerElapsed(object sender, ElapsedEventArgs e)
-        {
-            // Проверка состояния директории
-            string[] files = Directory.GetFiles(directoryPath);
-
-            // Уведомление об изменениях каждого наблюдателя
-            foreach (var observer in observers)
+            foreach (var file in files)
             {
-                observer.Update(directoryPath);
+                if (currentFiles.Contains(file))
+                {
+                    continue;
+                }
+
+                currentFiles.Add(file);
+
+                OnFileChanged(file);
+            }
+
+            for (int i = currentFiles.Count - 1; i >= 0; i--)
+            {
+                var file = currentFiles[i];
+                if (!File.Exists(file))
+                {
+                    currentFiles.RemoveAt(i);
+                    OnFileChanged(file);
+                }
             }
         }
-    }
-
-    // Класс, реализующий конкретного обсервера
-    public class FileObserver : IObserver
-    {
-        public void Update(string path)
+        
+        protected virtual void OnFileChanged(string fileName)
         {
-            Console.WriteLine($"Директория {path} изменилась");
+            FileChanged?.Invoke(this, new DirectoryChangedEventArgs { FileName = fileName });
         }
     }
 
-    // Пример использования
+    public class DirectoryChangeHandler
+    {
+        public void OnFileChanged(object sender, DirectoryChangedEventArgs args)
+        {
+            Console.WriteLine($"File {args.FileName} has been changed");
+        }
+    }
+
     public class Program
     {
         public static void Main(string[] args)
         {
-            string path = @"../../../../../../test"; // Путь к наблюдаемой директории
+            var directorySystemWatcher = new DirectorySystemWatcher("../../../../../../test");
 
-            DirectoryWatcher watcher = new DirectoryWatcher(path);
-            FileObserver observer = new FileObserver();
+            var directoryChangeHandler = new DirectoryChangeHandler();
 
-            watcher.AddObserver(observer);
-            watcher.Start();
+            directorySystemWatcher.FileChanged += directoryChangeHandler.OnFileChanged;
 
-            Console.WriteLine("Press any key to stop...");
-            Console.ReadKey();
-
-            watcher.Stop();
+            while (true)
+            {
+                directorySystemWatcher.CheckDirectory(directorySystemWatcher.timer);
+            }
         }
     }
 }
