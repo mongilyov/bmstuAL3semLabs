@@ -1,0 +1,23 @@
+﻿@page "{id:min(1)?}"
+@model task1.Pages.Passengers.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Passenger!</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Passenger.PassengerId" />
+    <div class="passEditRowName">
+        <label asp-for="Passenger.Name">Edit name: </label>
+        <input asp-for="Passenger.Name" placeholder="@Model.Passenger.Name" />
+    </div>
+    <div class="passEditRowEmail">
+        <label asp-for="Passenger.Email">Edit email: </label>
+        <input asp-for="Passenger.Email" placeholder="@Model.Passenger.Email" />
+    </div>
+    <div class="row">
+        <button type="submit">Update</button>
+        <a asp-page="/Passengers/Passengers">Cancel</a>
+    </div>
+</form>

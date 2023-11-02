@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{98C0C5B8-1A60-41A6-86B2-3A0F90053923}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.task2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.task3 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.task1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.FigureTest PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="FigureTest/UnitTest1.cs">
+    <Files>
+      <File FileName="lab01/Program.cs" Line="4" Column="6" />
+      <File FileName="task2/Rectangle.cs" Line="40" Column="4" />
+      <File FileName="RectangleTest/UnitTest1.cs" Line="26" Column="6" />
+      <File FileName="RectangleTest/Usings.cs" Line="1" Column="1" />
+      <File FileName="task3/Point.cs" Line="27" Column="14" />
+      <File FileName="task2/task2.cs" Line="11" Column="26" />
+      <File FileName="task3/EmptyStruct.cs" Line="11" Column="90" />
+      <File FileName="task3/Figure.cs" Line="34" Column="33" />
+      <File FileName="FigureTest/UnitTest1.cs" Line="18" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="lab01" expanded="True" selected="True">
+            <Node name="RectangleTest" expanded="True" />
+            <Node name="task2" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="lab01" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

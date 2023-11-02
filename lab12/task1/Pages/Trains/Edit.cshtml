@@ -1,0 +1,19 @@
+﻿@page "{id:min(1)?}"
+@model task1.Pages.Trains.EditModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit Ticket!</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="Train.TrainId" />
+    <div class="passEditRowName">
+        <label asp-for="Train.TrainId">Edit TrainId: </label>
+        <input asp-for="Train.TrainId" placeholder="@Model.Train.TrainId" />
+    </div>
+    <div class="row">
+        <button type="submit">Update</button>
+        <a asp-page="/Trains/Trains">Cancel</a>
+    </div>
+</form>

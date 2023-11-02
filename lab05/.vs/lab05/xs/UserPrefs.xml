@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{C1B08193-4CC4-4885-99F6-020FDACC929C}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.task03 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.task01 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.task02 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="task02/task02.cs">
+    <Files>
+      <File FileName="task03/task03.cs" />
+      <File FileName="task03/MyDictionary.cs" Line="186" Column="24" />
+      <File FileName="task01/MyMatrix.cs" Line="122" Column="40" />
+      <File FileName="task02/MyList.cs" Line="77" Column="24" />
+      <File FileName="task02/task02.cs" Line="13" Column="25" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="lab05" expanded="True">
+            <Node name="task01" expanded="True" />
+            <Node name="task02" expanded="True">
+              <Node name="task02.cs" selected="True" />
+            </Node>
+            <Node name="task03" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

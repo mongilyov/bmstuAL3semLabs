@@ -1,0 +1,36 @@
+﻿<Properties StartupConfiguration="{368BE0D4-DE97-44A4-A72A-57D3106C3F0F}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.task03 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.task01 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.task02 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="task03/Car.cs">
+    <Files>
+      <File FileName="task03/Car.cs" Line="51" Column="14" />
+      <File FileName="task03/task03.cs" />
+      <File FileName="task02/task02.cs" Line="34" Column="36" />
+      <File FileName="task01/MyMatrix.cs" Line="56" Column="31" />
+      <File FileName="task02/Car.cs" Line="34" Column="5" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="lab04" expanded="True">
+            <Node name="task01" expanded="True" />
+            <Node name="task02" expanded="True" />
+            <Node name="task03" expanded="True">
+              <Node name="Car.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

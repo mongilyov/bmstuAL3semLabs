@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{6B3891F7-2471-4782-9EC8-2B4FCA1920DE}|Default">
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.task2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.task3 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.ItemProperties.task1 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="task3/Currency.cs">
+    <Files>
+      <File FileName="task1/Vector.cs" Line="47" Column="61" />
+      <File FileName="task2/Car.cs" Line="20" Column="10" />
+      <File FileName="task3/Currency.cs" Line="32" Column="4" />
+      <File FileName="task3/task3.cs" Line="10" Column="74" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="lab03" expanded="True">
+            <Node name="task1" expanded="True" />
+            <Node name="task2" expanded="True" />
+            <Node name="task3" expanded="True">
+              <Node name="Currency.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
